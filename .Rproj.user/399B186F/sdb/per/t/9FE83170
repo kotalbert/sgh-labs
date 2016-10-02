@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "# Wnioskowanie statystyczne\n\n# Przykład 16\n\na <- 0.05\nx_dash <- 4.2\nsigma <- 0.0649\nn <- 175\n\nu_alpha <- qnorm(a/2)\nlcl <- x_dash - abs(u_alpha)*(sigma/sqrt(n))\nucl <- x_dash + abs(u_alpha)*(sigma/sqrt(n))\n\nd <-(ucl - lcl)\n\n\npoint_est <- x_dash + sigma/sqrt(n)\navg_err <- sigma/sqrt(n)\nmax_err <- 2 * avg_err\nwzg_err <- d/x_dash\nrozp <- 2 * max_err\n\n# Przykład 13\n# Policzyć, jakie przyjęto prawdopodobieństwo przy wyznaczeniu przedziałów ufności\nn <-1200\nw_i <- 960/n\nd <- (0.822 - 0.777)/2\nabs_u_alpha <- d/sqrt(w_i*(1-w_i)/n)\nalpha <- dnorm(abs_u_alpha)\n\n# Minimalna liczebność próby przy założeniu błędu 3%\nn_min <- (abs_u_alpha^2*w_i*(1-w_i))/(0.03^2)\n\n## Testowanie hipotez statystycznych\n# Przykład 12\n\nalpha = 0.05\nn=800 \nm_i <- 320\nw_i <- m_i/n\np_0 <- 0.35\n\n# Sformułowanie hipotez\n# H_0: p == p_0 == 0.35\n# H_1: p > p_0 różnice są statystycznie istotne\n\n# Wyznacznie wartości statystyki\nu <- (w_i - p_0)/sqrt((p_0*(1-p_0))/n)\n\n# Przykład 16 cd.\n\nalpha <- 0.05\nm_0 <- 4.2\nsigma <- 0.0649\nn <- 175\n\n\n# H_0: m == m_0 == 4\n# H_1: m != m_0\n\nm <- 4\nu  <- ((m_0 - m)/sigma)*sqrt(n)\n\nu_2a <- qnorm(1-2*alpha)\nu_a <- qnorm(1-alpha)\n",
+    "created" : 1475400039322.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1552377126",
+    "id" : "9FE83170",
+    "lastKnownWriteTime" : 1475407929,
+    "last_content_update" : -2147483648,
+    "path" : "C:/Users/pd94584p/OneDrive - Szkoła Główna Handlowa w Warszawie/sgh-labs/20161002/20161002_lab_est.R",
+    "project_path" : "20161002/20161002_lab_est.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
