@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "# Laboratorium z przetwarzania danych\n# 2016-10-15\n\n# Ustawienie środowiska\n# Uwaga - podana ścieżka tylko na komputerze SGH!\nd <- \"C:\\\\Users\\\\pd94584p\\\\OneDrive - Szkoła Główna Handlowa w Warszawie\\\\sgh-labs\\\\20161015\\\\\"\nsource(paste0(d, \"20161015_setup.R\"))\n\n# Zadanie z samochodami (sashelp.cars)\ncars <- readsas('cars')\n\nsamochody <- dplyr::tbl_df(cars) %>%\n  filter(Origin == \"Asia\" || Origin == \"Europe\") %>%\n  select(Make:Origin, MSRP, EngineSize) %>%\n  rename(\n    make_pl = Make\n    , model_pl = Model\n    , origin_pl = Origin\n    , type_pl = Type\n    , msrp_pl = MSRP\n    , engine_size = EngineSize\n    )\n  \nView(samochody)\n\n# Daty i ich funkcje\n# Ćwiczenia na zbiorze sashelp.gulfoil\noil <- readsas('gulfoil')\n\noil2 <- tbl_df(oil)\n  # TODO: konwersja zmiennej date na poprawną datę.\n  #filter(regionname == \"Central\", year(date) >= 2000, year(date) <= 2005)\n\nView(oil2)\n\n# Liczby losowe\n\n# ustaw seed - losuje inne liczby niż sas\nset.seed(12345)\nnor <- rnorm(mean = 0, sd = 1, n = 1)\n\n\n# Funkcje numeryczne\n\n# Funkcje znakowe\n\n  \n\n\n\n\n",
+    "created" : 1476515790501.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3143964836",
+    "id" : "C96E87D3",
+    "lastKnownWriteTime" : 1476536929,
+    "last_content_update" : -2147483648,
+    "path" : "C:/Users/pd94584p/OneDrive - Szkoła Główna Handlowa w Warszawie/sgh-labs/20161015/20161015_lab.R",
+    "project_path" : "20161015/20161015_lab.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
