@@ -36,3 +36,7 @@ premia <- sapply(comp$JOB1, premia)
 comp2 <- cbind(comp, premia)
 
 # Grupowanie
+
+# Transpozycja
+
+
