@@ -1,0 +1,14 @@
+Szanowni Pañstwo,
+
+w za³¹czniku otrzymali Pañstwo zadania do wykonania na zaliczenie przedmiotu przetwarzanie danych.
+
+
+Rozwi¹zania musz¹ znajdowaæ siê w jednym pliku z rozszerzeniem *.sas lub *.txt. Kody rozwi¹zañ wszystkich zadañ powinny znajdowaæ siê w jednym pliku. Nazwa pliku powinna zawieraæ numeralbumu_nazwisko_imiê.sas np. 12345_Rozenbajgier_Piotr.sas
+
+Proszê nie przesy³aæ rozwi¹zañ w postaci projektu SAS EG.
+
+
+Termin nades³ania rozwi¹zañ to 30.10.2016 23:59.
+
+
+Jeœli bêd¹ mieli Pañstwo pytania dotycz¹ce treœci zadañ zapraszam do kontaktu.
