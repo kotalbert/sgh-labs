@@ -9,7 +9,9 @@ libname out 'H:\UsersData\pd14184\rozwojowo\sgh-labs\20161015\zaliczenie';
 
 /*Zadanie 2*/
 data 
-    out.samochody
+    /*Na wyjœciu tworzone s¹ dwa zbiory, wg. zadanych kreteriów*/
+    out.samochochodydo2l (where=(EngineSize<=2))
+    out.samochodyponad2l (where=(EngineSize>2))
     ;
 set sashelp.cars (keep=
     Make Model Origin DriveTrain Invoice MSRP EngineSize 
@@ -17,13 +19,18 @@ set sashelp.cars (keep=
     );
 where Origin in ('Europe', 'Asia') & DriveTrain = 'Rear';
 
+/*Deklaraca zm. binarnych*/
 lenght asia usa europe 3.;
 
-if EngineSize<2 then
+if EngineSize<=2 then
     akcyza = .031 * invoice;
-else 
+else if EngineSize>2 then 
     akcyza = .186 * invoice;
+/*Obs³uga braków danych*/
+else
+    akcyza = .A;
 
+/*Zak³adam stawkê vat 23%*/
 cena_msrp_vat =  .23 * msrp;
 
 if origin  = 'Asia' then asia = 1;
@@ -32,21 +39,15 @@ else asia = 0;
 if origin = 'Europe' then europe = 1;
 else europe = 0;
 
+/*instrukcja where wyklucza ze zbioru obserwacje, gdzie origin = 'USA'*/
 if origin = 'USA' then usa = 1;
 else usa = 0;
 
 run;
 
-data 
-    out.samochochodydo2l (where=(EngineSize<2))
-    out.samochodyponad2l (where=(EngineSize>=2))
-    ;
-set out.samochody;
-run;
-
 /*Zadanie 3*/
 proc sort data=out.samochodyponad2l out=out.samochody_sorted;
-where MSRP > 40000;
+where MSRP > 4e4;
 by Origin descending make mpg_city;
 run;
 
@@ -64,7 +65,8 @@ set out.samochody;
 by make;
 /*
 Poniewa¿ zbiór jest posortowany, najdro¿szy bêdzie pierwszy samochód
-danej marki w grupie.
+danej marki w grupie wg. "make".
+Jednoczeœnie wykonuje przeliczenie na pln wg. zmiennej MSRP.
 */
 if first.make = 1 then do 
     MSRP_pln = 3.69 * MSRP;
@@ -84,7 +86,6 @@ proc format;
         low - < 0 = 'B³êdna wartoœæ'
         . = 'Brak wartoœci'
         ;
-
 run;
 
 /*Zadanie 6*/
