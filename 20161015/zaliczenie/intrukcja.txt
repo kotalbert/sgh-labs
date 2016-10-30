@@ -12,3 +12,11 @@ Termin nades³ania rozwi¹zañ to 30.10.2016 23:59.
 
 
 Jeœli bêd¹ mieli Pañstwo pytania dotycz¹ce treœci zadañ zapraszam do kontaktu.
+
+1. w zadaniu 2 nalezy przyjac cena_msrp_z_vat jaki cene z akcyza.
+
+2. w zadaniu 3 cena bez akcyzy.
+
+3. tak w zadaniu 4 mozna wykorzystac sashelp.cars
+
+tak zadania 8 nie ma
