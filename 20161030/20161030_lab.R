@@ -28,3 +28,15 @@ plot(x, py, col="blue",xlab="", ylab="Density"
 plot(x,cy, col="red", xlab="", ylab="Cumulative Probability",
      type="l",lwd=2, cex=2, main="CDF of Standard Normal", cex.axis=.8)
 hist(y)
+
+# Testowanie statystyczne 
+
+# Test t na równość średnich
+x <- rnorm(1000, mean=1, sd=1)
+t.test(x, mu = 1)
+
+y <- rnorm(1000, mean=1, sd=10)
+t.test(x,y)
+
+z <- rnorm(1000, mean=0.5, sd=1)
+t.test(x, z)
