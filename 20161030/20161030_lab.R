@@ -40,3 +40,7 @@ t.test(x,y)
 
 z <- rnorm(1000, mean=0.5, sd=1)
 t.test(x, z)
+
+# Zadanie 1.
+axles <- readsas("axles")
+t.test(axles$xi, mu=24)
