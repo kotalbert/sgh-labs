@@ -1,24 +1,6 @@
-/*
-Uwaga - zadzia³a tylko jeœli na komputerze jest zainstalowany Excel
-*/
-proc import datafile="&p.\sas_data\AXLES.xls"
+proc import datafile="C:\Users\pd94584p\OneDrive - Szko³a G³ówna Handlowa w Warszawie\sgh-labs\20161029\sas_data\AXLES.xls"
 	out=work.axles
 	replace
 	;	
 	getnames=yes;
-run;
-
-/*
-Eksport do pliku
-*/
-proc export data=dat.hpraca 
-	outfile="&p.\out\hpraca.dlm" 
-	dbms=dlm 
-	replace;
-	delimiter="|";
-run;
-
-proc contents data=dat.amsterdam_stock details
-; 
-
 run;
