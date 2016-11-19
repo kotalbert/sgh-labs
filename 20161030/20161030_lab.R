@@ -1,5 +1,4 @@
-# Laboratorium z przetwarzania danych
-# 2016-10-30
+C
 
 # Ustawienie środowiska
 # Uwaga - podana ścieżka tylko na komputerze SGH!
@@ -44,3 +43,10 @@ t.test(x, z)
 # Zadanie 1.
 axles <- readsas("axles")
 t.test(axles$xi, mu=24)
+
+# Zadanie 4.2
+wages <- readsas("wages")
+t.test(wages$wage, mu=9, alternative = "greater")
+
+klienci <- readsas("klienci")
+t.test(klienci$LKLIENTOW ~ klienci$DZIEN)
