@@ -1,0 +1,186 @@
+*Dane z podrêcznika SOP z SAS;
+libname bib1 'C:\...';
+*Dane do zajêæ z korelacji i regresji;
+libname bib2 'D:\...';
+
+*Analiza wariancji z klasyfikacj¹ pojedyncz¹;
+ods graphics on;
+proc anova data=bib1.inwest_gosp;
+	class wiek;
+	model inwest = wiek;
+	means wiek / hovtest=bartlett hovtest=levene hovtest=bf
+			lsd bon tukey alpha=0.05;
+run;
+
+*<Oszacowania parametrów modelu Yij = u + ai + eij>;
+proc glm data=bib1.inwest_gosp;
+	class wiek;
+	model inwest = wiek / solution;
+	output out=resi predicted=p residual=r;
+run;
+
+
+*Weryfikacja za³o¿enia o normalmnoœci Y w badanych populacjach;
+*Ocena graficzna;
+proc sgpanel data=bib1.inwest_gosp;
+	panelby wiek;
+	histogram inwest;
+run;
+*Testy zgodnoœci;
+ods graphics on;
+ods select /*histogram*/ GoodnessOfFit ;
+proc univariate data=bib1.inwest_gosp;
+	var inwest;
+	histogram inwest / normal;
+	by wiek;
+run;
+
+*Analiza warinacji z klasyfikacj¹ podwójn¹;
+proc freq data=bib1.mpracy;
+	tables edu*plec / nocum nocol norow nopercent;
+run;
+
+ods graphics on;
+proc glm data=bib1.mpracy plots(only)=(intplot diagnostics(unpack));
+	class edu plec;
+	model lprac = edu plec edu*plec / ss1 ss3 solution;
+	lsmeans edu*plec / diff=all adjust=tukey alpha=0.05;
+	output r=r;
+run;
+
+	
+*Nieparametryczna ANOVA (test Kruskala-Wallisa);
+proc sgpanel data=bib2.xm19_05;
+	panelby period;
+	histogram score;
+run;
+
+proc npar1way data=bib2.xm19_05 wilcoxon;
+	var score;
+	class period;
+run; 
+
+
+*Analiza korelacji;
+*Wspó³czynnik korelacji liniowej Pearsona;
+ods graphics on;
+proc corr data=bib1.cexp
+	plots=(scatter(ellipse=none) matrix)
+	pearson
+	vardef=df 
+    cov
+	fisher(rho0=0)
+	;
+	var clotexp hinc;
+run;
+
+*Wspó³czynnik korelacji rang Spearmana;
+data com;
+input commercials rating;
+cards;
+8 1
+6 2
+3 3
+4 3
+5 3
+7 3
+1 4
+2 5
+;
+run;
+proc sgplot data=com;
+	scatter  x=commercials y=rating / markerattrs=(symbol=asterisk color=red);
+run;
+proc corr data=com spearman;
+	var commercials;
+	with rating;
+run;
+
+*Nieparametryczne miary zale¿noœci;
+proc sgplot data=bib1.kraje2008;
+	scatter x=pkb y=energia / datalabel=kraj;
+run;
+
+proc corr data=bib1.kraje2008 pearson hoeffding kendall spearman vardef=df;
+	var energia;
+	with pkb;
+run;
+
+*Regresja liniowa;
+/*Dane do predykcji*/
+data pred;
+input clotexp hinc;
+cards;
+. 30
+;
+run;
+data cexp;
+	set bib1.cexp pred;
+run;
+
+ods graphics on;
+proc reg data=cexp 
+	plots(only)=(cooksd(label) residualhistogram residualbypredicted fitplot);
+	model clotexp =  hinc / clb spec alpha=0.05;
+	output out=out
+		residual=resi predicted=p cookd=cookd
+		lclm=lclm uclm=uclm
+	lcl=lcl ucl=ucl
+ ;
+	plot clotexp * hinc;
+	plot cookd. * hinc;/*outliers*/
+	plot residual. * npp.;/*normality*/
+	plot residual. * predicted.;/*homoscedasticity*/
+run; 
+
+proc print data=out noobs;
+	where hinc=30;
+run;
+
+*Wa¿ona MNK;
+proc reg data=bib1.cexp;
+	model clotexp = hinc ;
+	output out=o1 residual=resi;
+run;
+data o1_;
+	set o1;
+	absr=abs(resi);
+run;
+proc reg data=o1_;
+	model absr = hinc ;
+	output out=o2 p=shat;
+run;
+data o2;
+	set o2;
+	wi=1/(shat*shat);
+run;
+proc reg data=o2;
+	model clotexp = hinc / spec;
+	weight wi;
+run;
+
+/*Æw 3. Regresja wieloraka*/
+proc means data=bib1.prod maxdec=0;
+ var htyg hpensja ledu wiek;
+run; 
+data prod;
+ input pred htyg hpensja ledu plec wiek;
+ cards;
+1 . 10 12 0 30
+1 . 19 12 0 30
+ ;
+run;
+data prod1;
+ set bib1.prod prod;
+run;
+proc reg data=prod1; 
+	model htyg = hpensja ledu plec wiek/
+	clb 
+	alpha=0.05 
+	tol vif;
+	output out=out predicted=p lcl=lcl ucl=ucl; 
+run;
+
+proc print data=out; 
+	where pred=1;
+run;
