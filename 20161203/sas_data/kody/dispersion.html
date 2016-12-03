@@ -1,0 +1,2490 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="Generator" content="SAS Software, see www.sas.com" sasversion="9.1">
+<meta http-equiv="Content-type" content="text/html; charset=windows-1250">
+<title>SAS Output</title>
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: "." }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+.ContentTitle
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+}
+.Output
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #F0F0F0;
+  border-width: 1px;
+  border-color: #000000;
+}
+.HeaderEmphasis
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.NoteContent
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Graph
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 1px;
+  border-color: #000000;
+}
+.WarnContentFixed
+{
+  font-family: Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.NoteBanner
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.FatalContent
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataStrong
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Document
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+a:link {
+color:#0066AA
+}
+a:visited {
+color:#004488
+}
+a:active {
+color:#004488
+}
+.BeforeCaption
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #E0E0E0;
+}
+.ContentsDate
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  width: 100%;
+}
+.Pages
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  margin-left: 8px;
+  margin-right: 8px;
+  list-style-type: decimal;
+}
+.TitlesAndFooters
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.IndexProcName
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.ProcTitle
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.IndexAction
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  margin-left: 6pt;
+  list-style-type: NONE;
+}
+.Data
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Table
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #F0F0F0;
+  border-width: 1px;
+  border-color: #000000;
+}
+.top_stacked_value
+{
+  padding-bottom: 1px;
+}
+.middle_stacked_value
+{
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.bottom_stacked_value
+{
+  padding-top: 1px;
+}
+.FooterEmpty
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.SysTitleAndFooterContainer
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 0;
+  width: 100%;
+}
+.RowFooterEmpty
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ContentFolder
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: NONE;
+}
+.RowFooterEmphasis
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowFooterStrongFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowFooterFixed
+{
+  font-family: Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.Index
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterFixed
+{
+  font-family: Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ExtendedPage
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 1pt;
+  text-align: center;
+}
+.Container
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Date
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  width: 100%;
+}
+.Caption
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #E0E0E0;
+}
+.WarnBanner
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Frame
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.HeaderStrongFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.IndexTitle
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+}
+.NoteContentFixed
+{
+  font-family: Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataEmphasisFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Note
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Byline
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FatalBanner
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ProcTitleFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ByContentFolder
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: NONE;
+}
+.PagesProcLabel
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.RowHeaderFixed
+{
+  font-family: Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowFooterEmphasisFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.WarnContent
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataEmpty
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Cell
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.Header
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PageNo
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  text-align: right;
+  vertical-align: top;
+}
+.ContentProcLabel
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.HeaderFixed
+{
+  font-family: Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PagesTitle
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #002288;
+}
+.RowHeaderEmpty
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PagesProcName
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.Batch
+{
+  font-family: SAS Monospace, Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+  border-width: 1px;
+  border-color: #000000;
+}
+.ContentItem
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  list-style-type: NONE;
+}
+.Body
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.PagesDate
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  width: 100%;
+}
+.HeaderEmpty
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterStrong
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterEmphasis
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ErrorContent
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.DataFixed
+{
+  font-family: Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.HeaderStrong
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.DataEmphasis
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.TitleAndNoteContainer
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 0;
+  width: 100%;
+}
+.RowFooter
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.IndexItem
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  margin-left: 6pt;
+  list-style-type: NONE;
+}
+.BylineContainer
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  border-width: 0;
+  width: 100%;
+}
+.FatalContentFixed
+{
+  font-family: Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.BodyDate
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+  width: 100%;
+  text-align: right;
+  vertical-align: top;
+}
+.Contents
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+  margin-left: 8px;
+  margin-right: 8px;
+  list-style-type: decimal;
+}
+.RowFooterStrong
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.UserText
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.HeadersAndFooters
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowHeaderEmphasisFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.ErrorBanner
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ContentProcName
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  list-style-type: decimal;
+}
+.RowHeaderStrong
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.PagesItem
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  list-style-type: NONE;
+}
+.RowHeader
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FooterStrongFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.AfterCaption
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #E0E0E0;
+}
+.RowHeaderStrongFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.RowHeaderEmphasis
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.DataStrongFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  background-color: #D3D3D3;
+}
+.Footer
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  font-style: normal;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.FolderAction
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  color: #0033AA;
+  margin-left: 6pt;
+  list-style-type: NONE;
+}
+.HeaderEmphasisFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+.SystemTitle
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.ErrorContentFixed
+{
+  font-family: Courier;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: normal;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.SystemFooter
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+  color: #002288;
+  background-color: #E0E0E0;
+}
+.FooterEmphasisFixed
+{
+  font-family: Courier New, Courier, monospace;
+  font-size: x-small;
+  font-weight: normal;
+  font-style: italic;
+  color: #0033AA;
+  background-color: #B0B0B0;
+}
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+<noscript></noscript>
+</head>
+<body onload="startup()" onunload="shutdown()" class="Body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+
+//-->
+</script>
+
+<noscript></noscript>
+<div class="branch">
+<a name="IDX"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c SystemTitle">The SAS System</td>
+</tr>
+</table><br>
+<div class="c ProcTitle">The LOGISTIC Procedure</div>
+<p>
+<div>
+<div align="center">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Logistic: Goodness-of-Fit">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b Header" colspan="5" scope="colgroup">Deviance and Pearson Goodness-of-Fit Statistics</th>
+</tr>
+<tr>
+<th class="l b Header" scope="col">Criterion</th>
+<th class="r b Header" scope="col">Value</th>
+<th class="r b Header" scope="col">DF</th>
+<th class="r b Header" scope="col">Value/DF</th>
+<th class="r b Header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">Deviance</th>
+<td class="r Data">14.6637</td>
+<td class="r Data">14</td>
+<td class="r Data">1.0474</td>
+<td class="r Data">0.4015</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Pearson</th>
+<td class="r Data">12.5581</td>
+<td class="r Data">14</td>
+<td class="r Data">0.8970</td>
+<td class="r Data">0.5616</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<p>
+<div class="c ProcTitle">Number of unique profiles: 18</div>
+<p>
+</div>
+<br>
+<a name="IDX1"></a>
+<div>
+<div align="center">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Logistic: Fit Statistics">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b Header" colspan="3" scope="colgroup">Model Fit Statistics</th>
+</tr>
+<tr>
+<th class="l b Header" scope="col">Criterion</th>
+<th class="r b Header" scope="col">Intercept<br>Only</th>
+<th class="r b Header" scope="col">Intercept<br>and<br>Covariates</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">AIC</th>
+<td class="r Data">28.287</td>
+<td class="r Data">25.436</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">SC</th>
+<td class="r Data">29.231</td>
+<td class="r Data">29.214</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">-2 Log L</th>
+<td class="r Data">26.287</td>
+<td class="r Data">17.436</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX2"></a>
+<div>
+<div align="center">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Logistic: Parameter Estimates">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b Header" colspan="6" scope="colgroup">Analysis of Maximum Likelihood Estimates</th>
+</tr>
+<tr>
+<th class="l b Header" scope="col">Parameter</th>
+<th class="r b Header" scope="col">DF</th>
+<th class="r b Header" scope="col">Estimate</th>
+<th class="r b Header" scope="col">Standard<br>Error</th>
+<th class="r b Header" scope="col">Wald<br>Chi-Square</th>
+<th class="r b Header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">Intercept</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-1.1926</td>
+<td class="r Data">11.9216</td>
+<td class="r Data">0.0100</td>
+<td class="r Data">0.9203</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Age</th>
+<td class="r Data">1</td>
+<td class="r Data">1.7647</td>
+<td class="r Data">0.9534</td>
+<td class="r Data">3.4261</td>
+<td class="r Data">0.0642</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Weight</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-0.1326</td>
+<td class="r Data">0.0869</td>
+<td class="r Data">2.3277</td>
+<td class="r Data">0.1271</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Height</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-0.1517</td>
+<td class="r Data">0.2902</td>
+<td class="r Data">0.2734</td>
+<td class="r Data">0.6011</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX3"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c SystemTitle">The SAS System</td>
+</tr>
+</table><br>
+<div class="c ProcTitle">The LOGISTIC Procedure</div>
+<p>
+<div>
+<div align="center">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Logistic: Goodness-of-Fit">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b Header" colspan="5" scope="colgroup">Deviance and Pearson Goodness-of-Fit Statistics</th>
+</tr>
+<tr>
+<th class="l b Header" scope="col">Criterion</th>
+<th class="r b Header" scope="col">Value</th>
+<th class="r b Header" scope="col">DF</th>
+<th class="r b Header" scope="col">Value/DF</th>
+<th class="r b Header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">Deviance</th>
+<td class="r Data">14.6637</td>
+<td class="r Data">14</td>
+<td class="r Data">1.0474</td>
+<td class="r Data">0.4015</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Pearson</th>
+<td class="r Data">12.5581</td>
+<td class="r Data">14</td>
+<td class="r Data">0.8970</td>
+<td class="r Data">0.5616</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<p>
+<div class="c ProcTitle">Number of unique profiles: 18</div>
+<p>
+</div>
+<br>
+<a name="IDX4"></a>
+<div>
+<div align="center">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Logistic: Fit Statistics">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b Header" colspan="3" scope="colgroup">Model Fit Statistics</th>
+</tr>
+<tr>
+<th class="l b Header" scope="col">Criterion</th>
+<th class="r b Header" scope="col">Intercept<br>Only</th>
+<th class="r b Header" scope="col">Intercept<br>and<br>Covariates</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">AIC</th>
+<td class="r Data">27.097</td>
+<td class="r Data">24.647</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">SC</th>
+<td class="r Data">28.042</td>
+<td class="r Data">28.425</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">-2 Log L</th>
+<td class="r Data">25.097</td>
+<td class="r Data">16.647</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX5"></a>
+<div>
+<div align="center">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Logistic: Parameter Estimates">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b Header" colspan="6" scope="colgroup">Analysis of Maximum Likelihood Estimates</th>
+</tr>
+<tr>
+<th class="l b Header" scope="col">Parameter</th>
+<th class="r b Header" scope="col">DF</th>
+<th class="r b Header" scope="col">Estimate</th>
+<th class="r b Header" scope="col">Standard<br>Error</th>
+<th class="r b Header" scope="col">Wald<br>Chi-Square</th>
+<th class="r b Header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">Intercept</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-1.1926</td>
+<td class="r Data">12.2009</td>
+<td class="r Data">0.0096</td>
+<td class="r Data">0.9221</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Age</th>
+<td class="r Data">1</td>
+<td class="r Data">1.7647</td>
+<td class="r Data">0.9757</td>
+<td class="r Data">3.2710</td>
+<td class="r Data">0.0705</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Weight</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-0.1326</td>
+<td class="r Data">0.0890</td>
+<td class="r Data">2.2224</td>
+<td class="r Data">0.1360</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Height</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-0.1517</td>
+<td class="r Data">0.2970</td>
+<td class="r Data">0.2610</td>
+<td class="r Data">0.6094</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX6"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c SystemTitle">The SAS System</td>
+</tr>
+</table><br>
+<div class="c ProcTitle">The LOGISTIC Procedure</div>
+<p>
+<div>
+<div align="center">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Logistic: Goodness-of-Fit">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b Header" colspan="5" scope="colgroup">Deviance and Pearson Goodness-of-Fit Statistics</th>
+</tr>
+<tr>
+<th class="l b Header" scope="col">Criterion</th>
+<th class="r b Header" scope="col">Value</th>
+<th class="r b Header" scope="col">DF</th>
+<th class="r b Header" scope="col">Value/DF</th>
+<th class="r b Header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">Deviance</th>
+<td class="r Data">14.6637</td>
+<td class="r Data">14</td>
+<td class="r Data">1.0474</td>
+<td class="r Data">0.4015</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Pearson</th>
+<td class="r Data">12.5581</td>
+<td class="r Data">14</td>
+<td class="r Data">0.8970</td>
+<td class="r Data">0.5616</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<p>
+<div class="c ProcTitle">Number of unique profiles: 18</div>
+<p>
+</div>
+<br>
+<a name="IDX7"></a>
+<div>
+<div align="center">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Logistic: Fit Statistics">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b Header" colspan="3" scope="colgroup">Model Fit Statistics</th>
+</tr>
+<tr>
+<th class="l b Header" scope="col">Criterion</th>
+<th class="r b Header" scope="col">Intercept<br>Only</th>
+<th class="r b Header" scope="col">Intercept<br>and<br>Covariates</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">AIC</th>
+<td class="r Data">31.305</td>
+<td class="r Data">27.438</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">SC</th>
+<td class="r Data">32.249</td>
+<td class="r Data">31.216</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">-2 Log L</th>
+<td class="r Data">29.305</td>
+<td class="r Data">19.438</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX8"></a>
+<div>
+<div align="center">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Logistic: Parameter Estimates">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b Header" colspan="6" scope="colgroup">Analysis of Maximum Likelihood Estimates</th>
+</tr>
+<tr>
+<th class="l b Header" scope="col">Parameter</th>
+<th class="r b Header" scope="col">DF</th>
+<th class="r b Header" scope="col">Estimate</th>
+<th class="r b Header" scope="col">Standard<br>Error</th>
+<th class="r b Header" scope="col">Wald<br>Chi-Square</th>
+<th class="r b Header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">Intercept</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-1.1926</td>
+<td class="r Data">11.2910</td>
+<td class="r Data">0.0112</td>
+<td class="r Data">0.9159</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Age</th>
+<td class="r Data">1</td>
+<td class="r Data">1.7647</td>
+<td class="r Data">0.9029</td>
+<td class="r Data">3.8194</td>
+<td class="r Data">0.0507</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Weight</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-0.1326</td>
+<td class="r Data">0.0823</td>
+<td class="r Data">2.5950</td>
+<td class="r Data">0.1072</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Height</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-0.1517</td>
+<td class="r Data">0.2748</td>
+<td class="r Data">0.3048</td>
+<td class="r Data">0.5809</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX9"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c SystemTitle">The SAS System</td>
+</tr>
+</table><br>
+<div class="c ProcTitle">The LOGISTIC Procedure</div>
+<p>
+<div>
+<div align="center">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Logistic: Goodness-of-Fit">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b Header" colspan="5" scope="colgroup">Deviance and Pearson Goodness-of-Fit Statistics</th>
+</tr>
+<tr>
+<th class="l b Header" scope="col">Criterion</th>
+<th class="r b Header" scope="col">Value</th>
+<th class="r b Header" scope="col">DF</th>
+<th class="r b Header" scope="col">Value/DF</th>
+<th class="r b Header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">Deviance</th>
+<td class="r Data">14.6637</td>
+<td class="r Data">14</td>
+<td class="r Data">1.0474</td>
+<td class="r Data">0.4015</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Pearson</th>
+<td class="r Data">12.5581</td>
+<td class="r Data">14</td>
+<td class="r Data">0.8970</td>
+<td class="r Data">0.5616</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<p>
+<div class="c ProcTitle">Number of unique profiles: 18</div>
+<p>
+</div>
+<br>
+<a name="IDX10"></a>
+<div>
+<div align="center">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Logistic: Fit Statistics">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b Header" colspan="3" scope="colgroup">Model Fit Statistics</th>
+</tr>
+<tr>
+<th class="l b Header" scope="col">Criterion</th>
+<th class="r b Header" scope="col">Intercept<br>Only</th>
+<th class="r b Header" scope="col">Intercept<br>and<br>Covariates</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">AIC</th>
+<td class="r Data">34.453</td>
+<td class="r Data">29.526</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">SC</th>
+<td class="r Data">35.397</td>
+<td class="r Data">33.304</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">-2 Log L</th>
+<td class="r Data">32.453</td>
+<td class="r Data">21.526</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX11"></a>
+<div>
+<div align="center">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Logistic: Parameter Estimates">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b Header" colspan="6" scope="colgroup">Analysis of Maximum Likelihood Estimates</th>
+</tr>
+<tr>
+<th class="l b Header" scope="col">Parameter</th>
+<th class="r b Header" scope="col">DF</th>
+<th class="r b Header" scope="col">Estimate</th>
+<th class="r b Header" scope="col">Standard<br>Error</th>
+<th class="r b Header" scope="col">Wald<br>Chi-Square</th>
+<th class="r b Header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">Intercept</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-1.1926</td>
+<td class="r Data">10.7294</td>
+<td class="r Data">0.0124</td>
+<td class="r Data">0.9115</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Age</th>
+<td class="r Data">1</td>
+<td class="r Data">1.7647</td>
+<td class="r Data">0.8580</td>
+<td class="r Data">4.2297</td>
+<td class="r Data">0.0397</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Weight</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-0.1326</td>
+<td class="r Data">0.0782</td>
+<td class="r Data">2.8737</td>
+<td class="r Data">0.0900</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Height</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-0.1517</td>
+<td class="r Data">0.2612</td>
+<td class="r Data">0.3375</td>
+<td class="r Data">0.5613</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX12"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c SystemTitle">The SAS System</td>
+</tr>
+</table><br>
+<div class="c ProcTitle">The GENMOD Procedure</div>
+<p>
+<div>
+<div align="center">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Genmod: Criteria For Assessing Goodness Of Fit">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b Header" colspan="4" scope="colgroup">Criteria For Assessing Goodness Of Fit</th>
+</tr>
+<tr>
+<th class="l b Header" scope="col">Criterion</th>
+<th class="r b Header" scope="col">DF</th>
+<th class="r b Header" scope="col">Value</th>
+<th class="r b Header" scope="col">Value/DF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">Deviance</th>
+<td class="r Data">14</td>
+<td class="r Data">14.6637</td>
+<td class="r Data">1.0474</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Scaled Deviance</th>
+<td class="r Data">14</td>
+<td class="r Data">14.6637</td>
+<td class="r Data">1.0474</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Pearson Chi-Square</th>
+<td class="r Data">14</td>
+<td class="r Data">12.5582</td>
+<td class="r Data">0.8970</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Scaled Pearson X2</th>
+<td class="r Data">14</td>
+<td class="r Data">12.5582</td>
+<td class="r Data">0.8970</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Log Likelihood</th>
+<td class="r Data">&nbsp;</td>
+<td class="r Data" nowrap>-8.7181</td>
+<td class="r Data">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX13"></a>
+<div>
+<div align="center">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Genmod: Analysis Of Parameter Estimates">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b Header" colspan="8" scope="colgroup">Analysis Of Parameter Estimates</th>
+</tr>
+<tr>
+<th class="l b Header" scope="col">Parameter</th>
+<th class="r b Header" scope="col">DF</th>
+<th class="r b Header" scope="col">Estimate</th>
+<th class="r b Header" scope="col">Standard Error</th>
+<th class="c b Header" colspan="2" scope="colgroup">Wald 95% Confidence Limits</th>
+<th class="r b Header" scope="col">Chi-Square</th>
+<th class="r b Header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">Intercept</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-1.1926</td>
+<td class="r Data">11.9216</td>
+<td class="r Data" nowrap>-24.5585</td>
+<td class="r Data">22.1733</td>
+<td class="r Data">0.01</td>
+<td class="r Data">0.9203</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Age</th>
+<td class="r Data">1</td>
+<td class="r Data">1.7647</td>
+<td class="r Data">0.9534</td>
+<td class="r Data" nowrap>-0.1039</td>
+<td class="r Data">3.6332</td>
+<td class="r Data">3.43</td>
+<td class="r Data">0.0642</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Weight</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-0.1326</td>
+<td class="r Data">0.0869</td>
+<td class="r Data" nowrap>-0.3030</td>
+<td class="r Data">0.0378</td>
+<td class="r Data">2.33</td>
+<td class="r Data">0.1271</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Height</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-0.1517</td>
+<td class="r Data">0.2902</td>
+<td class="r Data" nowrap>-0.7205</td>
+<td class="r Data">0.4170</td>
+<td class="r Data">0.27</td>
+<td class="r Data">0.6011</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Scale</th>
+<td class="r Data">0</td>
+<td class="r Data">1.0000</td>
+<td class="r Data">0.0000</td>
+<td class="r Data">1.0000</td>
+<td class="r Data">1.0000</td>
+<td class="r Data">&nbsp;</td>
+<td class="r Data">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<p>
+<div align="center"><table class="NoteContent"><tr>
+<td class="c NoteBanner">
+Note:</td>
+<td class="l NoteContent">The scale parameter was held fixed.</td></tr>
+</table>
+</div><p>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX14"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c SystemTitle">The SAS System</td>
+</tr>
+</table><br>
+<div class="c ProcTitle">The GENMOD Procedure</div>
+<p>
+<div>
+<div align="center">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Genmod: Criteria For Assessing Goodness Of Fit">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b Header" colspan="4" scope="colgroup">Criteria For Assessing Goodness Of Fit</th>
+</tr>
+<tr>
+<th class="l b Header" scope="col">Criterion</th>
+<th class="r b Header" scope="col">DF</th>
+<th class="r b Header" scope="col">Value</th>
+<th class="r b Header" scope="col">Value/DF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">Deviance</th>
+<td class="r Data">14</td>
+<td class="r Data">14.6637</td>
+<td class="r Data">1.0474</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Scaled Deviance</th>
+<td class="r Data">14</td>
+<td class="r Data">16.3473</td>
+<td class="r Data">1.1677</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Pearson Chi-Square</th>
+<td class="r Data">14</td>
+<td class="r Data">12.5582</td>
+<td class="r Data">0.8970</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Scaled Pearson X2</th>
+<td class="r Data">14</td>
+<td class="r Data">14.0000</td>
+<td class="r Data">1.0000</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Log Likelihood</th>
+<td class="r Data">&nbsp;</td>
+<td class="r Data" nowrap>-9.7191</td>
+<td class="r Data">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX15"></a>
+<div>
+<div align="center">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Genmod: Analysis Of Parameter Estimates">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b Header" colspan="8" scope="colgroup">Analysis Of Parameter Estimates</th>
+</tr>
+<tr>
+<th class="l b Header" scope="col">Parameter</th>
+<th class="r b Header" scope="col">DF</th>
+<th class="r b Header" scope="col">Estimate</th>
+<th class="r b Header" scope="col">Standard Error</th>
+<th class="c b Header" colspan="2" scope="colgroup">Wald 95% Confidence Limits</th>
+<th class="r b Header" scope="col">Chi-Square</th>
+<th class="r b Header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">Intercept</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-1.1926</td>
+<td class="r Data">11.2910</td>
+<td class="r Data" nowrap>-23.3226</td>
+<td class="r Data">20.9374</td>
+<td class="r Data">0.01</td>
+<td class="r Data">0.9159</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Age</th>
+<td class="r Data">1</td>
+<td class="r Data">1.7647</td>
+<td class="r Data">0.9029</td>
+<td class="r Data" nowrap>-0.0051</td>
+<td class="r Data">3.5344</td>
+<td class="r Data">3.82</td>
+<td class="r Data">0.0507</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Weight</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-0.1326</td>
+<td class="r Data">0.0823</td>
+<td class="r Data" nowrap>-0.2940</td>
+<td class="r Data">0.0287</td>
+<td class="r Data">2.59</td>
+<td class="r Data">0.1072</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Height</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-0.1517</td>
+<td class="r Data">0.2748</td>
+<td class="r Data" nowrap>-0.6904</td>
+<td class="r Data">0.3870</td>
+<td class="r Data">0.30</td>
+<td class="r Data">0.5809</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Scale</th>
+<td class="r Data">0</td>
+<td class="r Data">0.9471</td>
+<td class="r Data">0.0000</td>
+<td class="r Data">0.9471</td>
+<td class="r Data">0.9471</td>
+<td class="r Data">&nbsp;</td>
+<td class="r Data">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<p>
+<div align="center"><table class="NoteContent"><tr>
+<td class="c NoteBanner">
+Note:</td>
+<td class="l NoteContent">The scale parameter was estimated by the square root of Pearson&#39;s Chi-Square/DOF.</td></tr>
+</table>
+</div><p>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX16"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c SystemTitle">The SAS System</td>
+</tr>
+</table><br>
+<div class="c ProcTitle">The GENMOD Procedure</div>
+<p>
+<div>
+<div align="center">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Genmod: Criteria For Assessing Goodness Of Fit">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b Header" colspan="4" scope="colgroup">Criteria For Assessing Goodness Of Fit</th>
+</tr>
+<tr>
+<th class="l b Header" scope="col">Criterion</th>
+<th class="r b Header" scope="col">DF</th>
+<th class="r b Header" scope="col">Value</th>
+<th class="r b Header" scope="col">Value/DF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">Deviance</th>
+<td class="r Data">14</td>
+<td class="r Data">14.6637</td>
+<td class="r Data">1.0474</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Scaled Deviance</th>
+<td class="r Data">14</td>
+<td class="r Data">14.0000</td>
+<td class="r Data">1.0000</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Pearson Chi-Square</th>
+<td class="r Data">14</td>
+<td class="r Data">12.5582</td>
+<td class="r Data">0.8970</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Scaled Pearson X2</th>
+<td class="r Data">14</td>
+<td class="r Data">11.9898</td>
+<td class="r Data">0.8564</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Log Likelihood</th>
+<td class="r Data">&nbsp;</td>
+<td class="r Data" nowrap>-8.3236</td>
+<td class="r Data">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX17"></a>
+<div>
+<div align="center">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Genmod: Analysis Of Parameter Estimates">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b Header" colspan="8" scope="colgroup">Analysis Of Parameter Estimates</th>
+</tr>
+<tr>
+<th class="l b Header" scope="col">Parameter</th>
+<th class="r b Header" scope="col">DF</th>
+<th class="r b Header" scope="col">Estimate</th>
+<th class="r b Header" scope="col">Standard Error</th>
+<th class="c b Header" colspan="2" scope="colgroup">Wald 95% Confidence Limits</th>
+<th class="r b Header" scope="col">Chi-Square</th>
+<th class="r b Header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">Intercept</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-1.1926</td>
+<td class="r Data">12.2009</td>
+<td class="r Data" nowrap>-25.1059</td>
+<td class="r Data">22.7207</td>
+<td class="r Data">0.01</td>
+<td class="r Data">0.9221</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Age</th>
+<td class="r Data">1</td>
+<td class="r Data">1.7647</td>
+<td class="r Data">0.9757</td>
+<td class="r Data" nowrap>-0.1477</td>
+<td class="r Data">3.6770</td>
+<td class="r Data">3.27</td>
+<td class="r Data">0.0705</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Weight</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-0.1326</td>
+<td class="r Data">0.0890</td>
+<td class="r Data" nowrap>-0.3070</td>
+<td class="r Data">0.0417</td>
+<td class="r Data">2.22</td>
+<td class="r Data">0.1360</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Height</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-0.1517</td>
+<td class="r Data">0.2970</td>
+<td class="r Data" nowrap>-0.7338</td>
+<td class="r Data">0.4304</td>
+<td class="r Data">0.26</td>
+<td class="r Data">0.6094</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Scale</th>
+<td class="r Data">0</td>
+<td class="r Data">1.0234</td>
+<td class="r Data">0.0000</td>
+<td class="r Data">1.0234</td>
+<td class="r Data">1.0234</td>
+<td class="r Data">&nbsp;</td>
+<td class="r Data">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<p>
+<div align="center"><table class="NoteContent"><tr>
+<td class="c NoteBanner">
+Note:</td>
+<td class="l NoteContent">The scale parameter was estimated by the square root of DEVIANCE/DOF.</td></tr>
+</table>
+</div><p>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX18"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c SystemTitle">The SAS System</td>
+</tr>
+</table><br>
+<div class="c ProcTitle">The GENMOD Procedure</div>
+<p>
+<div>
+<div align="center">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Genmod: Criteria For Assessing Goodness Of Fit">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b Header" colspan="4" scope="colgroup">Criteria For Assessing Goodness Of Fit</th>
+</tr>
+<tr>
+<th class="l b Header" scope="col">Criterion</th>
+<th class="r b Header" scope="col">DF</th>
+<th class="r b Header" scope="col">Value</th>
+<th class="r b Header" scope="col">Value/DF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">Deviance</th>
+<td class="r Data">14</td>
+<td class="r Data">14.6637</td>
+<td class="r Data">1.0474</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Scaled Deviance</th>
+<td class="r Data">14</td>
+<td class="r Data">58.6547</td>
+<td class="r Data">4.1896</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Pearson Chi-Square</th>
+<td class="r Data">14</td>
+<td class="r Data">12.5582</td>
+<td class="r Data">0.8970</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Scaled Pearson X2</th>
+<td class="r Data">14</td>
+<td class="r Data">50.2326</td>
+<td class="r Data">3.5880</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Log Likelihood</th>
+<td class="r Data">&nbsp;</td>
+<td class="r Data" nowrap>-34.8725</td>
+<td class="r Data">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX19"></a>
+<div>
+<div align="center">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Genmod: Analysis Of Parameter Estimates">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b Header" colspan="8" scope="colgroup">Analysis Of Parameter Estimates</th>
+</tr>
+<tr>
+<th class="l b Header" scope="col">Parameter</th>
+<th class="r b Header" scope="col">DF</th>
+<th class="r b Header" scope="col">Estimate</th>
+<th class="r b Header" scope="col">Standard Error</th>
+<th class="c b Header" colspan="2" scope="colgroup">Wald 95% Confidence Limits</th>
+<th class="r b Header" scope="col">Chi-Square</th>
+<th class="r b Header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l RowHeader" scope="row">Intercept</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-1.1926</td>
+<td class="r Data">5.9608</td>
+<td class="r Data" nowrap>-12.8756</td>
+<td class="r Data">10.4903</td>
+<td class="r Data">0.04</td>
+<td class="r Data">0.8414</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Age</th>
+<td class="r Data">1</td>
+<td class="r Data">1.7647</td>
+<td class="r Data">0.4767</td>
+<td class="r Data">0.8304</td>
+<td class="r Data">2.6989</td>
+<td class="r Data">13.70</td>
+<td class="r Data">0.0002</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Weight</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-0.1326</td>
+<td class="r Data">0.0435</td>
+<td class="r Data" nowrap>-0.2178</td>
+<td class="r Data" nowrap>-0.0474</td>
+<td class="r Data">9.31</td>
+<td class="r Data">0.0023</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Height</th>
+<td class="r Data">1</td>
+<td class="r Data" nowrap>-0.1517</td>
+<td class="r Data">0.1451</td>
+<td class="r Data" nowrap>-0.4361</td>
+<td class="r Data">0.1327</td>
+<td class="r Data">1.09</td>
+<td class="r Data">0.2957</td>
+</tr>
+<tr>
+<th class="l RowHeader" scope="row">Scale</th>
+<td class="r Data">0</td>
+<td class="r Data">0.5000</td>
+<td class="r Data">0.0000</td>
+<td class="r Data">0.5000</td>
+<td class="r Data">0.5000</td>
+<td class="r Data">&nbsp;</td>
+<td class="r Data">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<p>
+<div align="center"><table class="NoteContent"><tr>
+<td class="c NoteBanner">
+Note:</td>
+<td class="l NoteContent">The scale parameter was held fixed.</td></tr>
+</table>
+</div><p>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br></p><hr size="3">
+<a name="IDX20"></a>
+<table class="SysTitleAndFooterContainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c SystemTitle">The SAS System</td>
+</tr>
+</table><br>
+<div>
+<div align="center">
+<table class="Table" cellspacing="1" cellpadding="7" rules="groups" frame="box" border="1px" bordercolor="#000000" summary="Procedure Print: Data Set WORK.FIT">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c Header" scope="col">Obs</th>
+<th class="c Header" scope="col">_Proc_</th>
+<th class="c Header" scope="col">_Run_</th>
+<th class="l Header" scope="col">Criterion</th>
+<th class="r Header" scope="col">DF</th>
+<th class="r Header" scope="col">Value</th>
+<th class="r Header" scope="col">ValueDF</th>
+<th class="r Header" scope="col">p_value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r RowHeader" scope="row"> 1</th>
+<td class="l Data">Genmod</td>
+<td class="r Data">    1</td>
+<td class="l Data">Deviance</td>
+<td class="r Data">  14</td>
+<td class="r Data">     14.6637</td>
+<td class="r Data">      1.0474</td>
+<td class="r Data">  0.4015</td>
+</tr>
+<tr>
+<th class="r RowHeader" scope="row"> 2</th>
+<td class="l Data">Genmod</td>
+<td class="r Data">    1</td>
+<td class="l Data">Scaled Deviance</td>
+<td class="r Data">  14</td>
+<td class="r Data">     14.6637</td>
+<td class="r Data">      1.0474</td>
+<td class="r Data">  0.4015</td>
+</tr>
+<tr>
+<th class="r RowHeader" scope="row"> 3</th>
+<td class="l Data">Genmod</td>
+<td class="r Data">    1</td>
+<td class="l Data">Pearson Chi-Square</td>
+<td class="r Data">  14</td>
+<td class="r Data">     12.5582</td>
+<td class="r Data">      0.8970</td>
+<td class="r Data">  0.5616</td>
+</tr>
+<tr>
+<th class="r RowHeader" scope="row"> 4</th>
+<td class="l Data">Genmod</td>
+<td class="r Data">    1</td>
+<td class="l Data">Scaled Pearson X2</td>
+<td class="r Data">  14</td>
+<td class="r Data">     12.5582</td>
+<td class="r Data">      0.8970</td>
+<td class="r Data">  0.5616</td>
+</tr>
+<tr>
+<th class="r RowHeader" scope="row"> 5</th>
+<td class="l Data">Genmod</td>
+<td class="r Data">    1</td>
+<td class="l Data">Log Likelihood</td>
+<td class="r Data">   _</td>
+<td class="r Data" nowrap>     -8.7181</td>
+<td class="r Data">       _</td>
+<td class="r Data">   .</td>
+</tr>
+<tr>
+<th class="r RowHeader" scope="row"> 6</th>
+<td class="l Data">Genmod</td>
+<td class="r Data">    1</td>
+<td class="l Data">Deviance</td>
+<td class="r Data">  14</td>
+<td class="r Data">     14.6637</td>
+<td class="r Data">      1.0474</td>
+<td class="r Data">  0.4015</td>
+</tr>
+<tr>
+<th class="r RowHeader" scope="row"> 7</th>
+<td class="l Data">Genmod</td>
+<td class="r Data">    1</td>
+<td class="l Data">Scaled Deviance</td>
+<td class="r Data">  14</td>
+<td class="r Data">     16.3473</td>
+<td class="r Data">      1.1677</td>
+<td class="r Data">  0.2926</td>
+</tr>
+<tr>
+<th class="r RowHeader" scope="row"> 8</th>
+<td class="l Data">Genmod</td>
+<td class="r Data">    1</td>
+<td class="l Data">Pearson Chi-Square</td>
+<td class="r Data">  14</td>
+<td class="r Data">     12.5582</td>
+<td class="r Data">      0.8970</td>
+<td class="r Data">  0.5616</td>
+</tr>
+<tr>
+<th class="r RowHeader" scope="row"> 9</th>
+<td class="l Data">Genmod</td>
+<td class="r Data">    1</td>
+<td class="l Data">Scaled Pearson X2</td>
+<td class="r Data">  14</td>
+<td class="r Data">     14.0000</td>
+<td class="r Data">      1.0000</td>
+<td class="r Data">  0.4497</td>
+</tr>
+<tr>
+<th class="r RowHeader" scope="row">10</th>
+<td class="l Data">Genmod</td>
+<td class="r Data">    1</td>
+<td class="l Data">Log Likelihood</td>
+<td class="r Data">   _</td>
+<td class="r Data" nowrap>     -9.7191</td>
+<td class="r Data">       _</td>
+<td class="r Data">   .</td>
+</tr>
+<tr>
+<th class="r RowHeader" scope="row">11</th>
+<td class="l Data">Genmod</td>
+<td class="r Data">    1</td>
+<td class="l Data">Deviance</td>
+<td class="r Data">  14</td>
+<td class="r Data">     14.6637</td>
+<td class="r Data">      1.0474</td>
+<td class="r Data">  0.4015</td>
+</tr>
+<tr>
+<th class="r RowHeader" scope="row">12</th>
+<td class="l Data">Genmod</td>
+<td class="r Data">    1</td>
+<td class="l Data">Scaled Deviance</td>
+<td class="r Data">  14</td>
+<td class="r Data">     14.0000</td>
+<td class="r Data">      1.0000</td>
+<td class="r Data">  0.4497</td>
+</tr>
+<tr>
+<th class="r RowHeader" scope="row">13</th>
+<td class="l Data">Genmod</td>
+<td class="r Data">    1</td>
+<td class="l Data">Pearson Chi-Square</td>
+<td class="r Data">  14</td>
+<td class="r Data">     12.5582</td>
+<td class="r Data">      0.8970</td>
+<td class="r Data">  0.5616</td>
+</tr>
+<tr>
+<th class="r RowHeader" scope="row">14</th>
+<td class="l Data">Genmod</td>
+<td class="r Data">    1</td>
+<td class="l Data">Scaled Pearson X2</td>
+<td class="r Data">  14</td>
+<td class="r Data">     11.9898</td>
+<td class="r Data">      0.8564</td>
+<td class="r Data">  0.6071</td>
+</tr>
+<tr>
+<th class="r RowHeader" scope="row">15</th>
+<td class="l Data">Genmod</td>
+<td class="r Data">    1</td>
+<td class="l Data">Log Likelihood</td>
+<td class="r Data">   _</td>
+<td class="r Data" nowrap>     -8.3236</td>
+<td class="r Data">       _</td>
+<td class="r Data">   .</td>
+</tr>
+<tr>
+<th class="r RowHeader" scope="row">16</th>
+<td class="l Data">Genmod</td>
+<td class="r Data">    1</td>
+<td class="l Data">Deviance</td>
+<td class="r Data">  14</td>
+<td class="r Data">     14.6637</td>
+<td class="r Data">      1.0474</td>
+<td class="r Data">  0.4015</td>
+</tr>
+<tr>
+<th class="r RowHeader" scope="row">17</th>
+<td class="l Data">Genmod</td>
+<td class="r Data">    1</td>
+<td class="l Data">Scaled Deviance</td>
+<td class="r Data">  14</td>
+<td class="r Data">     58.6547</td>
+<td class="r Data">      4.1896</td>
+<td class="r Data">  &lt;.0001</td>
+</tr>
+<tr>
+<th class="r RowHeader" scope="row">18</th>
+<td class="l Data">Genmod</td>
+<td class="r Data">    1</td>
+<td class="l Data">Pearson Chi-Square</td>
+<td class="r Data">  14</td>
+<td class="r Data">     12.5582</td>
+<td class="r Data">      0.8970</td>
+<td class="r Data">  0.5616</td>
+</tr>
+<tr>
+<th class="r RowHeader" scope="row">19</th>
+<td class="l Data">Genmod</td>
+<td class="r Data">    1</td>
+<td class="l Data">Scaled Pearson X2</td>
+<td class="r Data">  14</td>
+<td class="r Data">     50.2326</td>
+<td class="r Data">      3.5880</td>
+<td class="r Data">  &lt;.0001</td>
+</tr>
+<tr>
+<th class="r RowHeader" scope="row">20</th>
+<td class="l Data">Genmod</td>
+<td class="r Data">    1</td>
+<td class="l Data">Log Likelihood</td>
+<td class="r Data">   _</td>
+<td class="r Data" nowrap>    -34.8725</td>
+<td class="r Data">       _</td>
+<td class="r Data">   .</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+</body>
+</html>
