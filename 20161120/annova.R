@@ -1,17 +1,34 @@
-# Laboratorimu 
+# Laboratorium
 # 2016-11-19
 
 # Analiza wariancji
+source("r_setup.R")
 
-# Zadanie 7 (5.4)
-v <- c(55, 54, 59, 53, 56,
-      66, 76, 67, 71, 59,
+# Zadanie 5.4 
+v <- c(55, 54, 59, 56, 56,
+      66, 76, 67, 71, 69,
       47, 51, 46, 48, 49,
       76, 81, 76, 79, 78)
 
 x <- matrix(v, ncol=4)
 
-# H0: m1 = m2 = m3 = m4
+# H0: mu1 = mu2 = mu3 = mu4
+# H1: Co najmnieji jedno mu_i <> mu_j
+
+# Statystyki
+yh <- mean(x)
+nt <- length(x)
+yhi <- apply(x, 2, mean)
+ni <- apply(x, 2, length)
+
+# SST: total variation
+
+# SBB: model variation
+ssb <- sum(ni * (yhi - yh)^2)
+# SSE: random variation
+
+
+
 # liczba obserwacji
 n <- length(x)
 
