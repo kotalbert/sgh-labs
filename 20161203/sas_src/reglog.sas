@@ -1,13 +1,14 @@
 /*
 Regresja logistyczna
-Ćwiczenianame
+Ćwiczeniania 2016-12-03
 */
-%let wd=C:\Users\pd94584p\.babun\cygwin\home\pd94584p\sgh-labs\20161203\sas_data;
 
-lib wej "&wd";
-libname wyj "&wd\kody\dane\" compress=yes;
-libname freki "&wd\kody\freq\" compress=yes;
-libname testy "&wd\kody\testy\" compress=yes;
+%let d=C:\Users\pd94584p\.babun\cygwin\home\pd94584p\sgh-labs\20161203\sas_data;
+
+libname wej "&d.";
+libname wyj "&d.\kody\dane\";
+libname freki "&d.\kody\freq\" ;
+libname testy "&d.\kody\testy\" ;
 
 /*Definicja zmiennej celu*/
 %let tar=default12;
@@ -60,6 +61,7 @@ proc reg data=&zb outest=b1;
    output out=r p=p r=r;
 run;
 quit;
+
 data test;
 set &zb;
 nowa=&tar*100;
