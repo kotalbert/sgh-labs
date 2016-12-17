@@ -25,6 +25,7 @@ owa("app_char_city")
 owa("app_char_home_status")
 owa("app_char_cars")
 owa("app_number_of_children")
+dev.off()
 
 # Analiza danych ciągłych w zbiorze
 owa2 <- function(vname) {
@@ -35,14 +36,15 @@ owa2 <- function(vname) {
         xlab("Flaga default")
     # Test t
     td <- dplyr::mutate_(nauka, v=vname)
-    v1 <- td$v[target == 1]
-    v2 <- td$v[target == 0]
+    v1 <- td$v[td$target == 1]
+    v2 <- td$v[td$target == 0]
     tt <- t.test(v1, v2)
 
     print(tt)
     print(g)
     
 }
+
 owa2("act_age")
 owa2("act_cc")
 owa2("act_loaninc")
@@ -56,4 +58,4 @@ owa2("act_cins_min_seniority")
 owa2("act_cins_n_loans_hist")
 owa2("act_cins_n_statC")	
 owa2("act_cins_n_statB")
-
+dev.off()
