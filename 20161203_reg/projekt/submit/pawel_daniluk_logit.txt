@@ -1,0 +1,6 @@
+Paweł Daniluk
+2016-12-18
+
+Najważniejszą zmienną w opracowanym modelu regresji logistycznej jest app_number_of_children - liczba posiadanych dzieci, ponieważ dla niej uzyskano najwyższą statystykę Chi-kwadrat Walda (944.95).
+Oszacowanie parametru dla zmiennej app_number_of_children to -0.6767, co przekłada się na iloraz szans odds ratio 0.508. 
+Oznacza to, że każde kolejne posiadane dziecko zmniejsza prawdopodobieństwo wejścia w status "default" o 0.492.
